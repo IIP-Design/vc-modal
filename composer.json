@@ -1,0 +1,16 @@
+{
+    "name": "usstatedept/vc-modal",
+    "type": "wordpress-plugin",
+    "description" : "A WordPress plugin that extends Visual Composer with a modal popup shortcode.",
+    "authors": [
+        {
+            "name": "Office of Design, Bureau of International Information Programs",
+            "email": "gustassj@america.gov"
+        }
+    ],
+    "minimum-stability": "stable",
+    "version": "0.0.1",
+    "require": {
+       "composer/installers": "~1.0"
+    }
+}
