@@ -1,4 +1,4 @@
-s<?php
+<?php
 /*
 Plugin Name: Visual Composer Modal Popup
 Description: Extends Visual Composer with a modal element shortcode.
