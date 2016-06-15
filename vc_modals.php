@@ -85,9 +85,10 @@ class VCExtendAddonClass {
         $img_string = "<img src='" . plugins_url($image, __FILE__) . "' alt='" . $name . "' />";
       } else {
         $img_src = wp_get_attachment_image_url( $image, array(356, 220) );
-        $img_srcset = wp_get_attachment_image_srcset( $image, array(356, 220) );
+        //$img_srcset = wp_get_attachment_image_srcset( $image, array(356, 220) );
 
-        $img_string = "<img src='" . esc_url( $img_src ) . "' srcset='" . esc_attr( $img_srcset ) . "' sizes='' alt='" . $name . "' />";
+        //$img_string = "<img src='" . esc_url( $img_src ) . "' srcset='" . esc_attr( $img_srcset ) . "' sizes='' alt='" . $name . "' />";
+        $img_string = "<img src='" . esc_url( $img_src ) . "' alt='" . $name . "' />";
       }
 
       $output = "<div class='expand_vc_modal'>";
