@@ -2,7 +2,7 @@
 /*
 Plugin Name: Visual Composer Modal Popup
 Description: Extends Visual Composer with a modal element shortcode.
-Version: 0.0.1
+Version: 0.1.0
 Author: Scott Gustas
 License: GPLv2 or later
 */
@@ -20,6 +20,12 @@ class VCExtendAddonClass {
 
         // Register CSS and JS
         add_action( 'wp_enqueue_scripts', array( $this, 'loadCssAndJs' ) );
+
+        // Set up image size
+        add_action( 'init', 'vcmodal_image_setup' );
+        function vcmodal_image_setup() {
+            add_image_size( 'vc-modal', 356, 220, true ); // (cropped)
+        }
     }
  
     public function integrateWithVC() {
@@ -44,8 +50,6 @@ class VCExtendAddonClass {
             "controls" => "full",
             "icon" => plugins_url('assets/popup.png', __FILE__), // or css class name which you can reffer in your css file later. Example: "vc_extend_my_class"
             "category" => __('Content', 'js_composer'),
-            //'admin_enqueue_js' => array(plugins_url('assets/vc_modal.js', __FILE__)), // This will load js file in the VC backend editor
-            //'admin_enqueue_css' => array(plugins_url('assets/vc_modal_admin.css', __FILE__)), // This will load css file in the VC backend editor
             "params" => array(
                 array(
                   "type" => "textfield",
@@ -85,9 +89,6 @@ class VCExtendAddonClass {
         $img_string = "<img src='" . plugins_url($image, __FILE__) . "' alt='" . $name . "' />";
       } else {
         $img_src = wp_get_attachment_image_url( $image, array(356, 220) );
-        //$img_srcset = wp_get_attachment_image_srcset( $image, array(356, 220) );
-
-        //$img_string = "<img src='" . esc_url( $img_src ) . "' srcset='" . esc_attr( $img_srcset ) . "' sizes='' alt='" . $name . "' />";
         $img_string = "<img src='" . esc_url( $img_src ) . "' alt='" . $name . "' />";
       }
 

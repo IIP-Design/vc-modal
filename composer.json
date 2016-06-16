@@ -9,7 +9,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "require": {
        "composer/installers": "~1.0"
     }
