@@ -2,7 +2,7 @@
 /*
 Plugin Name: Visual Composer Modal Popup
 Description: Extends Visual Composer with a modal element shortcode.
-Version: 0.1.1
+Version: 0.1.2
 Author: Scott Gustas
 License: GPLv2 or later
 */
