@@ -2,7 +2,7 @@
 /*
 Plugin Name: Visual Composer Modal Popup
 Description: Extends Visual Composer with a modal element shortcode.
-Version: 0.1.2
+Version: 0.1.3
 Author: Scott Gustas
 License: GPLv2 or later
 */
@@ -14,7 +14,7 @@ class VCExtendAddonClass {
     function __construct() {
         // We safely integrate with VC with this hook
         add_action( 'init', array( $this, 'integrateWithVC' ) );
- 
+
         // Use this when creating a shortcode addon
         add_shortcode( 'vc_modal', array( $this, 'renderModal' ) );
 
@@ -27,7 +27,7 @@ class VCExtendAddonClass {
             add_image_size( 'vc-modal', 356, 220, true ); // (cropped)
         }
     }
- 
+
     public function integrateWithVC() {
         // Check if Visual Composer is installed
         if ( ! defined( 'WPB_VC_VERSION' ) ) {
@@ -35,7 +35,7 @@ class VCExtendAddonClass {
             add_action('admin_notices', array( $this, 'showVcVersionNotice' ));
             return;
         }
- 
+
         /*
         Add your Visual Composer logic here.
         Lets call vc_map function to "register" our custom shortcode within Visual Composer interface.
@@ -74,7 +74,7 @@ class VCExtendAddonClass {
             )
         ) );
     }
-    
+
     /*
     Shortcode logic how it should be rendered
     */

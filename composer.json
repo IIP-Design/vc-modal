@@ -1,5 +1,5 @@
 {
-    "name": "usstatedept/vc-modal",
+    "name": "iip-design/vc-modal",
     "type": "wordpress-plugin",
     "description" : "A WordPress plugin that extends Visual Composer with a modal popup shortcode.",
     "authors": [
@@ -9,7 +9,6 @@
         }
     ],
     "minimum-stability": "stable",
-    "version": "0.1.2",
     "require": {
        "composer/installers": "~1.0"
     }
